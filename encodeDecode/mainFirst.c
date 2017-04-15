@@ -29,9 +29,13 @@ void encode(char *s) {
     }
 }
 
-//Optimized
+//Not yet optimized
 void decode(char *s) {
- for(int i=0;s[i++];)if(s[i]>47&&s[i]<58)s[i]=s[i-(s[i]-47)];
+ for (int i=0; i<strlen(s); i++) {
+   if(s[i]>='0' && s[i]<='9') {
+      s[i]=s[i-(s[i]-48)-1];
+    }
+  }
 }
 
 void test(char *str, int mode) {
