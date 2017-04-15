@@ -2,12 +2,12 @@
 #include <stdio.h>
 #include <string.h>
 
-#define ENCODE (1)
-#define DECODE (0)
+#define ENCODE (0)
+#define DECODE (1)
 
 //Not yet optimized
 void encode(char *s) {
-    for(int i=0;i<strlen(s);i++){
+    for(int i=0;s[i];i++){
       int lastIndex=-1;
       if (s[i]>='0' && s[i]<='9') continue;
       for (int k=0;k<strlen(s);k++) {
@@ -28,6 +28,26 @@ void encode(char *s) {
       }
     }
 }
+/*for(int i=0;s[i];i++){
+  int lastIndex=-1;
+  if (s[i]>='0' && s[i]<='9') continue;
+  for (int k=0;k<strlen(s);k++) {
+    if (s[i] == s[k]) {
+      if (lastIndex==-1) {
+        lastIndex=0;
+      } else if (lastIndex>=10) {
+        lastIndex=0;
+      } else if (lastIndex>-1 && lastIndex < 10) {
+        s[k]='0'+lastIndex;
+        lastIndex = 0;
+      }
+    } else {
+      if (lastIndex>-1){
+      lastIndex++;
+    }
+    }
+  }
+}*/
 
 //Optimized
 void decode(char *s) {
