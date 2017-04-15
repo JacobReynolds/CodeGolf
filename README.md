@@ -8,4 +8,4 @@ mainFirst.c will be the first compilation that successfully solves the problem.
 
 mainPretty.c will be the optimized version with newlines.
 
-Thanks to [Ian McLinden](https://github.com/ianmclinden) for spiritual and emotional guidance.
+Thanks to [Ian McLinden](https://github.com/ianmclinden) for spiritual and emotional (and technical) guidance.
