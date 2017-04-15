@@ -31,7 +31,7 @@ void encode(char *s) {
 
 //Optimized
 void decode(char *s) {
- for(int i=0;s[i++];)if(s[i]>47&&s[i]<58)s[i]=s[i-(s[i]-47)];
+ for(int i=0;s[i++];)s[i]>47&&s[i]<58&&(s[i]=s[i-s[i]+47]);
 }
 
 void test(char *str, int mode) {
