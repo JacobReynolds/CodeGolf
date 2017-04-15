@@ -19,7 +19,6 @@ int main(int argc, const char * argv[]) {
     int i;
     char output[4] = "-%~";
     for (i=0;output[i]>0; i++) {
-        //printf("#### Character = %c ####\n",output[i]);
         egg(output[i]);
     }
     return 0;
