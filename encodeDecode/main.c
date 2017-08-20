@@ -50,13 +50,11 @@ void encode(char *s) {
 }*/
 
 //Optimized
-void decode(char *s) {
- for(int i=0;s[i++];)s[i]>47&&s[i]<58&&(s[i]=s[i-s[i]+47]);
-}
+d(char *s){for(int i=0;s[i++];)s[i]>47&&s[i]<58&&(s[i]=s[i-s[i]+47]);}
 
 void test(char *str, int mode) {
     printf("Input : %s\n", str);
-    (mode==ENCODE) ? encode(str) : decode(str);
+    (mode==ENCODE) ? encode(str) : d(str);
     printf("Output: %s\n\n", str);
 }
 
